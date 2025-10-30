@@ -1,5 +1,5 @@
 # Identifica o workflow no GitHub
-name: Integração Contínua
+name: Testes Automatizados
 
 # Executa ao atualizar main e dev ou PRs na dev
 on:
@@ -10,7 +10,7 @@ on:
 
 # Define o job de teste para rodar no Ubuntu
 jobs:
-  test:
+  tests:
     runs-on: ubuntu-latest
     # Cria jobs para cada versão do Python listada
     strategy:
@@ -18,7 +18,7 @@ jobs:
         python-version: ["3.10", "3.11", "3.12"]
 
     steps:
-    - name: Checkout do Código
+    - name: Faz Checkout do Código
       uses: actions/checkout@v5
 
     - name: Configura Python ${{ matrix.python-version }}
@@ -26,7 +26,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Instala de dependências
+    - name: Instala Dependências
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
