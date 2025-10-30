@@ -3,8 +3,8 @@ name: Lançamento de Versão
 
 # Executa ao atualizar main e dev ou PRs na dev
 on:
-  push:
-    branches: [ main]
+  release:
+    types: [ published ]
 
 # Define o job de teste para rodar no Ubuntu
 jobs:
