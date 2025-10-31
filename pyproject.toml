@@ -8,11 +8,6 @@ version = "0.1.0"
 description = "Biblioteca para demonstração da aula de CI/CD"
 authors = [{name = "Breno Viana", email = "bmfviana@gmail.com"}]
 readme = "README.md"
-classifiers = [
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.14",
-]
 
 [project.urls]
 Homepage = "https://github.com/brenomfviana/fsor-cicd-example"
@@ -21,4 +16,5 @@ Repository = "https://github.com/brenomfviana/fsor-cicd-example"
 
 [project.optional-dependencies]
 dev = ["pytest", "pytest-cov", "black", "flake8"]
+lint = ["black", "flake8"]
 test = ["pytest", "pytest-cov"]
