@@ -15,6 +15,7 @@ Repository = "https://github.com/brenomfviana/fsor-cicd-example"
 "Bug Tracker" = "https://github.com/brenomfviana/fsor-cicd-example/issues"
 
 [project.optional-dependencies]
+deploy = ["build", "twine"]
 dev = ["pytest", "pytest-cov", "black", "flake8"]
 lint = ["black", "flake8"]
 test = ["pytest", "pytest-cov"]
